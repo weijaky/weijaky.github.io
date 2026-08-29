@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
@@ -64,8 +64,8 @@
     <h1>Chính sách Bảo mật của BambooNode</h1>
 
     <div class="highlight">
-        <p><strong>Cập nhật lần cuối:</strong> 26 tháng 7 năm 2026</p>
-        <p><strong>Ngày hiệu lực:</strong> 26 tháng 7 năm 2026</p>
+        <p><strong>Cập nhật lần cuối:</strong> 29 tháng 8 năm 2026</p>
+        <p><strong>Ngày hiệu lực:</strong> 29 tháng 8 năm 2026</p>
     </div>
 
     <h2>1. Giới thiệu</h2>
@@ -103,6 +103,17 @@
     </ul>
     <p>Thông tin này chỉ được gửi khi bạn gửi phản hồi một cách rõ ràng và chỉ được sử dụng để cải thiện ứng dụng.</p>
 
+    <h3>2.4 Dữ liệu Báo cáo Sự cố (Firebase Crashlytics)</h3>
+    <p>Để giúp chúng tôi xác định và khắc phục sự cố sập ứng dụng cũng như cải thiện tính ổn định, BambooNode sử dụng Firebase Crashlytics, một dịch vụ do Google LLC cung cấp. Khi ứng dụng bị sập hoặc gặp lỗi không nghiêm trọng, Crashlytics tự động thu thập và truyền các dữ liệu kỹ thuật sau:</p>
+    <ul>
+        <li>Dấu vết ngăn xếp sập và chi tiết ngoại lệ</li>
+        <li>Mô hình thiết bị và phiên bản hệ điều hành Android</li>
+        <li>Phiên bản ứng dụng và mã nhận diện bản dựng</li>
+        <li>Mã nhận diện cài đặt ngẫu nhiên ẩn danh (đặt lại khi cài đặt lại ứng dụng)</li>
+        <li>Nhật ký breadcrumb các sự kiện trong ứng dụng ngay trước khi sập (nếu Google Analytics được kích hoạt)</li>
+    </ul>
+    <p>Dữ liệu này là <strong>ẩn danh và không nhận dạng cá nhân bạn</strong>. Nó được truyền qua kết nối mã hóa đến máy chủ của Google và chỉ được sử dụng để chẩn đoán và giải quyết khiếm khuyết ứng dụng. Crashlytics không thu thập nội dung ghi chú hoặc tệp của bạn. Việc Google sử dụng dữ liệu được điều chỉnh bởi <a href="https://firebase.google.com/support/privacy">Chính sách Bảo mật của Google</a>. Bạn có thể ngăn thu thập báo cáo sự cố bằng cách tắt quyền truy cập internet của ứng dụng, tuy nhiên điều này cũng sẽ tắt tính năng đồng bộ Git.</p>
+
     <h2>3. Chúng tôi sử dụng thông tin của bạn như thế nào?</h2>
     <p>Chúng tôi chỉ sử dụng thông tin của bạn cho các mục đích sau:</p>
     <ul>
@@ -128,12 +139,16 @@
 
     <h2>5. Chia sẻ dữ liệu</h2>
     <p>Chúng tôi không chia sẻ, bán hoặc thuê thông tin cá nhân của bạn cho bên thứ ba cho bất kỳ mục đích nào.</p>
-    <p>Ngoại lệ duy nhất là khi bạn kích hoạt đồng bộ Git, khi đó dữ liệu của bạn sẽ được truyền đến kho Git từ xa mà bạn chỉ định. Chúng tôi không kiểm soát cách các nhà cung cấp Git bên thứ ba xử lý dữ liệu của bạn.</p>
+    <p>Chúng tôi sử dụng các nhà cung cấp dịch vụ sau để cung cấp chức năng cốt lõi. Mỗi nhà cung cấp hoạt động như một người kiểm soát/người xử lý dữ liệu riêng biệt cho dữ liệu hạn chế được mô tả:</p>
+    <ul>
+        <li><strong>Google Firebase Crashlytics (Google LLC):</strong> Xử lý các báo cáo sự cố ẩn danh để giúp chúng tôi chẩn đoán và khắc phục khiếm khuyết ứng dụng. Xem <a href="https://firebase.google.com/support/privacy">Chính sách Bảo mật của Google</a>.</li>
+        <li><strong>Nhà cung cấp kho Git từ xa (khi bạn kích hoạt đồng bộ):</strong> Ghi chú và tệp của bạn được truyền đến kho Git từ xa mà bạn chỉ định. Chúng tôi không kiểm soát cách các nhà cung cấp Git bên thứ ba xử lý dữ liệu của bạn.</li>
+    </ul>
 
     <h2>6. Quyền truy cập</h2>
     <p>BambooNode cần các quyền truy cập sau để hoạt động:</p>
     <ul>
-        <li><strong>INTERNET:</strong> Cần thiết cho đồng bộ Git và tính năng phản hồi</li>
+        <li><strong>INTERNET:</strong> Cần thiết cho đồng bộ Git, tính năng phản hồi và truyền báo cáo sự cố ẩn danh qua Firebase Crashlytics</li>
         <li><strong>READ_EXTERNAL_STORAGE:</strong> Cần thiết để đọc ghi chú và tệp từ thiết bị của bạn</li>
         <li><strong>WRITE_EXTERNAL_STORAGE:</strong> Cần thiết để lưu ghi chú và tệp vào thiết bị của bạn</li>
         <li><strong>MANAGE_EXTERNAL_STORAGE:</strong> Cần thiết để truy cập đầy đủ lưu trữ bên ngoài trên Android 11+</li>

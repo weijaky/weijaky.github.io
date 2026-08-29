@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -64,8 +64,8 @@
     <h1>Politique de confidentialité de BambooNode</h1>
 
     <div class="highlight">
-        <p><strong>Dernière mise à jour :</strong> 26 juillet 2026</p>
-        <p><strong>Date d'entrée en vigueur :</strong> 26 juillet 2026</p>
+        <p><strong>Dernière mise à jour :</strong> 29 août 2026</p>
+        <p><strong>Date d'entrée en vigueur :</strong> 29 août 2026</p>
     </div>
 
     <h2>1. Introduction</h2>
@@ -103,6 +103,17 @@
     </ul>
     <p>Ces informations ne sont envoyées que lorsque vous soumettez explicitement un feedback et sont utilisées uniquement pour améliorer l'application.</p>
 
+    <h3>2.4 Données des rapports d'erreur (Firebase Crashlytics)</h3>
+    <p>Pour nous aider à identifier et à corriger les plantages de l'application et à améliorer la stabilité, BambooNode utilise Firebase Crashlytics, un service fourni par Google LLC. Lorsque l'application plante ou rencontre une erreur non fatale, Crashlytics collecte et transmet automatiquement les données techniques suivantes :</p>
+    <ul>
+        <li>Traces de pile d'erreur et détails des exceptions</li>
+        <li>Modèle de l'appareil et version du système d'exploitation Android</li>
+        <li>Version de l'application et identifiant de build</li>
+        <li>Identifiants d'installation anonymes générés aléatoirement (réinitialisés lors de la réinstallation de l'application)</li>
+        <li>Journaux breadcrumbs des événements dans l'application précédant immédiatement le plantage (si Google Analytics est activé)</li>
+    </ul>
+    <p>Ces données sont <strong>anonymes et ne vous identifient pas personnellement</strong>. Elles sont transmises via une connexion chiffrée aux serveurs de Google et sont utilisées uniquement pour diagnostiquer et résoudre les défauts de l'application. Crashlytics ne collecte pas le contenu de vos notes ou fichiers. L'utilisation de ces données par Google est régie par la <a href="https://firebase.google.com/support/privacy">Politique de confidentialité de Google</a>. Vous pouvez empêcher la collecte des rapports d'erreur en désactivant l'accès à Internet de l'application, bien que cela désactive également la fonction de synchronisation Git.</p>
+
     <h2>3. Comment utilisons-nous vos informations ?</h2>
     <p>Nous utilisons vos informations uniquement aux fins suivantes :</p>
     <ul>
@@ -128,12 +139,16 @@
 
     <h2>5. Partage de données</h2>
     <p>Nous ne partageons, ne vendons ni ne louons vos informations personnelles à des tiers à aucune fin.</p>
-    <p>La seule exception est lorsque vous activez la synchronisation Git, auquel cas vos données sont transmises au dépôt Git distant que vous spécifiez. Nous n'avons aucun contrôle sur la manière dont les fournisseurs Git tiers traitent vos données.</p>
+    <p>Nous utilisons les fournisseurs de services suivants pour fournir la fonctionnalité de base. Chacun agit en tant que responsable/sous-traitant de données distinct pour les données limitées décrites :</p>
+    <ul>
+        <li><strong>Google Firebase Crashlytics (Google LLC) :</strong> Traite les rapports d'erreur anonymes pour nous aider à diagnostiquer et corriger les défauts de l'application. Voir <a href="https://firebase.google.com/support/privacy">Politique de confidentialité de Google</a>.</li>
+        <li><strong>Fournisseurs de dépôts Git distants (lorsque vous activez la synchronisation) :</strong> Vos notes et fichiers sont transmis au dépôt Git distant que vous spécifiez. Nous n'avons aucun contrôle sur la manière dont les fournisseurs Git tiers traitent vos données.</li>
+    </ul>
 
     <h2>6. Permissions</h2>
     <p>BambooNode nécessite les permissions suivantes pour fonctionner :</p>
     <ul>
-        <li><strong>INTERNET :</strong> Nécessaire pour la synchronisation Git et les fonctions de feedback</li>
+        <li><strong>INTERNET :</strong> Nécessaire pour la synchronisation Git, les fonctions de feedback et la transmission des rapports d'erreur anonymes via Firebase Crashlytics</li>
         <li><strong>READ_EXTERNAL_STORAGE :</strong> Nécessaire pour lire les notes et fichiers de votre appareil</li>
         <li><strong>WRITE_EXTERNAL_STORAGE :</strong> Nécessaire pour enregistrer les notes et fichiers sur votre appareil</li>
         <li><strong>MANAGE_EXTERNAL_STORAGE :</strong> Nécessaire pour un accès complet au stockage externe sur Android 11+</li>

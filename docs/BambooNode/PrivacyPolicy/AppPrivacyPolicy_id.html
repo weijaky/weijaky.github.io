@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
@@ -64,8 +64,8 @@
     <h1>Kebijakan Privasi BambooNode</h1>
 
     <div class="highlight">
-        <p><strong>Tanggal Pembaruan Terakhir:</strong> 26 Juli 2026</p>
-        <p><strong>Tanggal Berlaku:</strong> 26 Juli 2026</p>
+        <p><strong>Tanggal Pembaruan Terakhir:</strong> 29 Agustus 2026</p>
+        <p><strong>Tanggal Berlaku:</strong> 29 Agustus 2026</p>
     </div>
 
     <h2>1. Pendahuluan</h2>
@@ -103,6 +103,17 @@
     </ul>
     <p>Informasi ini hanya dikirim ketika Anda secara eksplisit mengirim umpan balik dan hanya digunakan untuk meningkatkan aplikasi.</p>
 
+    <h3>2.4 Data Laporan Crash (Firebase Crashlytics)</h3>
+    <p>Untuk membantu kami mengidentifikasi dan memperbaiki crash aplikasi serta meningkatkan stabilitas, BambooNode menggunakan Firebase Crashlytics, layanan yang disediakan oleh Google LLC. Saat aplikasi crash atau mengalami error non-fatal, Crashlytics secara otomatis mengumpulkan dan mengirimkan data teknis berikut:</p>
+    <ul>
+        <li>Stack trace crash dan detail pengecualian</li>
+        <li>Model perangkat dan versi sistem operasi Android</li>
+        <li>Versi aplikasi dan pengidentifikasi build</li>
+        <li>Pengidentifikasi pemasangan anonim, yang dihasilkan secara acak (direset saat aplikasi dipasang ulang)</li>
+        <li>Log breadcrumb peristiwa dalam aplikasi segera sebelum crash (jika Google Analytics diaktifkan)</li>
+    </ul>
+    <p>Data ini <strong>anonim dan tidak mengidentifikasi Anda secara pribadi</strong>. Data ini dikirim melalui koneksi terenkripsi ke server Google dan digunakan semata-mata untuk mendiagnosis dan menyelesaikan cacat aplikasi. Crashlytics tidak mengumpulkan konten catatan atau file Anda. Penggunaan data oleh Google diatur oleh <a href="https://firebase.google.com/support/privacy">Kebijakan Privasi Google</a>. Anda dapat mencegah pengumpulan laporan crash dengan menonaktifkan akses internet aplikasi, meskipun ini juga akan menonaktifkan fitur sinkronisasi Git.</p>
+
     <h2>3. Bagaimana Kami Menggunakan Informasi Anda?</h2>
     <p>Kami hanya menggunakan informasi Anda untuk tujuan berikut:</p>
     <ul>
@@ -128,12 +139,16 @@
 
     <h2>5. Pembagian Data</h2>
     <p>Kami tidak membagikan, menjual, atau menyewakan informasi pribadi Anda ke pihak ketiga untuk tujuan apa pun.</p>
-    <p>Pengecualian satu-satunya adalah ketika Anda mengaktifkan sinkronisasi Git, di mana data Anda dikirim ke repositori Git jarak jauh yang Anda tentukan. Kami tidak memiliki kontrol atas bagaimana penyedia Git pihak ketiga menangani data Anda.</p>
+    <p>Kami menggunakan penyedia layanan berikut untuk menyediakan fungsi inti. Masing-masing beroperasi sebagai pengendali/processor data terpisah untuk data terbatas yang dijelaskan:</p>
+    <ul>
+        <li><strong>Google Firebase Crashlytics (Google LLC):</strong> Memproses laporan crash anonim untuk membantu kami mendiagnosis dan memperbaiki cacat aplikasi. Lihat <a href="https://firebase.google.com/support/privacy">Kebijakan Privasi Google</a>.</li>
+        <li><strong>Penyedia repositori Git jarak jauh (saat Anda mengaktifkan sinkronisasi):</strong> Catatan dan file Anda dikirim ke repositori Git jarak jauh yang Anda tentukan. Kami tidak memiliki kontrol atas bagaimana penyedia Git pihak ketiga menangani data Anda.</li>
+    </ul>
 
     <h2>6. Izin</h2>
     <p>BambooNode memerlukan izin berikut untuk berfungsi:</p>
     <ul>
-        <li><strong>INTERNET:</strong> Diperlukan untuk sinkronisasi Git dan fitur umpan balik</li>
+        <li><strong>INTERNET:</strong> Diperlukan untuk sinkronisasi Git, fitur umpan balik, dan mengirimkan laporan crash anonim melalui Firebase Crashlytics</li>
         <li><strong>READ_EXTERNAL_STORAGE:</strong> Diperlukan untuk membaca catatan dan file dari perangkat Anda</li>
         <li><strong>WRITE_EXTERNAL_STORAGE:</strong> Diperlukan untuk menyimpan catatan dan file ke perangkat Anda</li>
         <li><strong>MANAGE_EXTERNAL_STORAGE:</strong> Diperlukan untuk akses penuh ke penyimpanan eksternal pada Android 11+</li>

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
@@ -64,8 +64,8 @@
     <h1>Informativa sulla privacy di BambooNode</h1>
 
     <div class="highlight">
-        <p><strong>Ultimo aggiornamento:</strong> 26 luglio 2026</p>
-        <p><strong>Data di entrata in vigore:</strong> 26 luglio 2026</p>
+        <p><strong>Ultimo aggiornamento:</strong> 29 agosto 2026</p>
+        <p><strong>Data di entrata in vigore:</strong> 29 agosto 2026</p>
     </div>
 
     <h2>1. Introduzione</h2>
@@ -103,6 +103,17 @@
     </ul>
     <p>Queste informazioni vengono inviate solo quando invii esplicitamente un feedback e vengono utilizzate esclusivamente per migliorare l'applicazione.</p>
 
+    <h3>2.4 Dati dei rapporti di arresto anomalo (Firebase Crashlytics)</h3>
+    <p>Per aiutarci a identificare e correggere gli arresti anomali dell'applicazione e migliorare la stabilità, BambooNode utilizza Firebase Crashlytics, un servizio fornito da Google LLC. Quando l'applicazione si arresta in modo anomalo o incontra un errore non fatale, Crashlytics raccoglie e trasmette automaticamente i seguenti dati tecnici:</p>
+    <ul>
+        <li>Tracce dello stack di arresto anomalo e dettagli delle eccezioni</li>
+        <li>Modello del dispositivo e versione del sistema operativo Android</li>
+        <li>Versione dell'applicazione e identificatore di build</li>
+        <li>Identificatori di installazione anonimi generati casualmente (reimpostati alla reinstallazione dell'applicazione)</li>
+        <li>Registri breadcrumb degli eventi nell'applicazione immediatamente precedenti l'arresto anomalo (se Google Analytics è attivato)</li>
+    </ul>
+    <p>Questi dati sono <strong>anonimi e non ti identificano personalmente</strong>. Vengono trasmessi tramite una connessione crittografata ai server di Google e vengono utilizzati esclusivamente per diagnosticare e risolvere i difetti dell'applicazione. Crashlytics non raccoglie il contenuto delle tue note o dei tuoi file. L'utilizzo dei dati da parte di Google è regolato dall'<a href="https://firebase.google.com/support/privacy">Informativa sulla privacy di Google</a>. Puoi impedire la raccolta dei rapporti di arresto anomalo disabilitando l'accesso a Internet dell'applicazione, sebbene ciò disabiliterà anche la funzione di sincronizzazione Git.</p>
+
     <h2>3. Come utilizziamo le tue informazioni?</h2>
     <p>Utilizziamo le tue informazioni solo per i seguenti scopi:</p>
     <ul>
@@ -128,12 +139,16 @@
 
     <h2>5. Condivisione dei dati</h2>
     <p>Non condividiamo, vendiamo o affittiamo le tue informazioni personali a terzi per alcun motivo.</p>
-    <p>L'unica eccezione è quando attivi la sincronizzazione Git, nel qual caso i tuoi dati vengono trasmessi al repository Git remoto che specifichi. Non abbiamo controllo su come i provider Git di terzi gestiscono i tuoi dati.</p>
+    <p>Utilizziamo i seguenti provider di servizi per fornire la funzionalità principale. Ciascuno opera come titolare/destinatario del trattamento separato per i dati limitati descritti:</p>
+    <ul>
+        <li><strong>Google Firebase Crashlytics (Google LLC):</strong> Elabora i rapporti di arresto anomalo anonimi per aiutarci a diagnosticare e correggere i difetti dell'applicazione. Vedi l'<a href="https://firebase.google.com/support/privacy">Informativa sulla privacy di Google</a>.</li>
+        <li><strong>Provider di repository Git remoti (quando attivi la sincronizzazione):</strong> Le tue note e i tuoi file vengono trasmessi al repository Git remoto che specifichi. Non abbiamo controllo su come i provider Git di terze parti gestiscono i tuoi dati.</li>
+    </ul>
 
     <h2>6. Permessi</h2>
     <p>BambooNode richiede i seguenti permessi per funzionare:</p>
     <ul>
-        <li><strong>INTERNET:</strong> Richiesto per la sincronizzazione Git e le funzionalità di feedback</li>
+        <li><strong>INTERNET:</strong> Richiesto per la sincronizzazione Git, le funzionalità di feedback e la trasmissione dei rapporti di arresto anomalo anonimi tramite Firebase Crashlytics</li>
         <li><strong>READ_EXTERNAL_STORAGE:</strong> Richiesto per leggere note e file dal tuo dispositivo</li>
         <li><strong>WRITE_EXTERNAL_STORAGE:</strong> Richiesto per salvare note e file sul tuo dispositivo</li>
         <li><strong>MANAGE_EXTERNAL_STORAGE:</strong> Richiesto per l'accesso completo all'archiviazione esterna su Android 11+</li>

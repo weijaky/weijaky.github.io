@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
@@ -64,8 +64,8 @@
     <h1>Política de Privacidade do BambooNode</h1>
 
     <div class="highlight">
-        <p><strong>Última atualização:</strong> 26 de julho de 2026</p>
-        <p><strong>Data de entrada em vigor:</strong> 26 de julho de 2026</p>
+        <p><strong>Última atualização:</strong> 29 de agosto de 2026</p>
+        <p><strong>Data de entrada em vigor:</strong> 29 de agosto de 2026</p>
     </div>
 
     <h2>1. Introdução</h2>
@@ -103,6 +103,17 @@
     </ul>
     <p>Essas informações só são enviadas quando você envia feedback explicitamente e são usadas exclusivamente para melhorar o aplicativo.</p>
 
+    <h3>2.4 Dados de relatório de falhas (Firebase Crashlytics)</h3>
+    <p>Para nos ajudar a identificar e corrigir falhas do aplicativo e melhorar a estabilidade, o BambooNode usa o Firebase Crashlytics, um serviço fornecido pela Google LLC. Quando o aplicativo falha ou encontra um erro não fatal, o Crashlytics coleta e transmite automaticamente os seguintes dados técnicos:</p>
+    <ul>
+        <li>Rastros de pilha de falhas e detalhes de exceção</li>
+        <li>Modelo do dispositivo e versão do sistema operacional Android</li>
+        <li>Versão do aplicativo e identificador de compilação</li>
+        <li>Identificadores de instalação anônimos e gerados aleatoriamente (redefinidos na reinstalação do aplicativo)</li>
+        <li>Registros de rastros de eventos no aplicativo imediatamente anteriores à falha (se o Google Analytics estiver ativado)</li>
+    </ul>
+    <p>Esses dados são <strong>anônimos e não identificam você pessoalmente</strong>. Eles são transmitidos por uma conexão criptografada para os servidores do Google e são usados exclusivamente para diagnosticar e resolver defeitos do aplicativo. O Crashlytics não coleta o conteúdo de suas anotações ou arquivos. O uso dos dados pelo Google é regido pela <a href="https://firebase.google.com/support/privacy">Política de Privacidade do Google</a>. Você pode impedir a coleta de relatórios de falhas desativando o acesso à internet do aplicativo, embora isso também desative a função de sincronização Git.</p>
+
     <h2>3. Como usamos suas informações?</h2>
     <p>Nós usamos suas informações apenas para os seguintes fins:</p>
     <ul>
@@ -128,12 +139,16 @@
 
     <h2>5. Compartilhamento de dados</h2>
     <p>Nós não compartilhamos, vendemos ou alugamos suas informações pessoais a terceiros para qualquer fim.</p>
-    <p>A única exceção é quando você habilita a sincronização Git, caso em que seus dados são transmitidos para o repositório Git remoto que você especifica. Não temos controle sobre como os provedores de Git de terceiros tratam seus dados.</p>
+    <p>Usamos os seguintes provedores de serviços para fornecer a funcionalidade principal. Cada um atua como um controlador/processador de dados separado para os dados limitados descritos:</p>
+    <ul>
+        <li><strong>Google Firebase Crashlytics (Google LLC):</strong> Processa relatórios de falhas anônimos para nos ajudar a diagnosticar e corrigir defeitos do aplicativo. Consulte a <a href="https://firebase.google.com/support/privacy">Política de Privacidade do Google</a>.</li>
+        <li><strong>Provedores de repositórios Git remotos (quando você habilita a sincronização):</strong> Suas anotações e arquivos são transmitidos para o repositório Git remoto que você especifica. Não temos controle sobre como os provedores Git de terceiros tratam seus dados.</li>
+    </ul>
 
     <h2>6. Permissões</h2>
     <p>O BambooNode requer as seguintes permissões para funcionar:</p>
     <ul>
-        <li><strong>INTERNET:</strong> Necessária para sincronização Git e funções de feedback</li>
+        <li><strong>INTERNET:</strong> Necessária para sincronização Git, funções de feedback e transmissão de relatórios de falhas anônimos via Firebase Crashlytics</li>
         <li><strong>READ_EXTERNAL_STORAGE:</strong> Necessária para ler anotações e arquivos do seu dispositivo</li>
         <li><strong>WRITE_EXTERNAL_STORAGE:</strong> Necessária para salvar anotações e arquivos no seu dispositivo</li>
         <li><strong>MANAGE_EXTERNAL_STORAGE:</strong> Necessária para acesso completo ao armazenamento externo no Android 11+</li>

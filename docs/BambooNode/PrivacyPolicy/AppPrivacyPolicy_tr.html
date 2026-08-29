@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
@@ -64,8 +64,8 @@
     <h1>BambooNode Gizlilik Politikası</h1>
 
     <div class="highlight">
-        <p><strong>Son Güncelleme:</strong> 26 Temmuz 2026</p>
-        <p><strong>Etkinlik Tarihi:</strong> 26 Temmuz 2026</p>
+        <p><strong>Son Güncelleme:</strong> 29 Ağustos 2026</p>
+        <p><strong>Etkinlik Tarihi:</strong> 29 Ağustos 2026</p>
     </div>
 
     <h2>1. Giriş</h2>
@@ -103,6 +103,17 @@
     </ul>
     <p>Bu bilgiler, açıkça geri bildirim gönderdiğinizde sadece gönderilir ve yalnızca uygulamayı geliştirmek için kullanılır.</p>
 
+    <h3>2.4 Çökme Raporu Verileri (Firebase Crashlytics)</h3>
+    <p>Uygulama çökmelerini tanımlamamıza ve düzeltmemize ve kararlılığı artırmamıza yardımcı olmak için BambooNode, Google LLC tarafından sağlanan bir hizmet olan Firebase Crashlytics kullanır. Uygulama çöktüğünde veya ölümcül olmayan bir hatayla karşılaştığında, Crashlytics otomatik olarak aşağıdaki teknik verileri toplar ve iletir:</p>
+    <ul>
+        <li>Çökme yığın izleri ve istisna ayrıntıları</li>
+        <li>Cihaz modeli ve Android işletim sistemi sürümü</li>
+        <li>Uygulama sürümü ve yapı tanımlayıcısı</li>
+        <li>Anonim, rastgele oluşturulmuş kurulum tanımlayıcıları (uygulama yeniden yüklendiğinde sıfırlanır)</li>
+        <li>Çökmeden hemen önceki uygulama içi olayların kırıntı günlükleri (Google Analytics etkinse)</li>
+    </ul>
+    <p>Bu veriler <strong>anonimdir ve sizi kişisel olarak tanımlamaz</strong>. Veriler şifreli bir bağlantı üzerinden Google sunucularına iletilir ve yalnızca uygulama kusurlarını tanılamak ve çözmek için kullanılır. Crashlytics notlarınızın veya dosyalarınızın içeriğini toplamaz. Verilerin Google tarafından kullanımı <a href="https://firebase.google.com/support/privacy">Google'ın Gizlilik Politikası</a> ile yönetilir. Uygulamanın internet erişimini devre dışı bırakarak çökme raporu toplanmasını önleyebilirsiniz, ancak bu Git senkronizasyon özelliğini de devre dışı bırakır.</p>
+
     <h2>3. Bilgilerinizi Nasıl Kullanırız?</h2>
     <p>Bilgilerinizi yalnızca aşağıdaki amaçlar için kullanırız:</p>
     <ul>
@@ -128,12 +139,16 @@
 
     <h2>5. Veri Paylaşımı</h2>
     <p>Kişisel bilgilerinizi hiçbir amaçla üçüncü taraflarla paylaşmaz, satmaz veya kiralamaz.</p>
-    <p>Tek istisna, Git senkronizasyonunu etkinleştirdiğiniz durumdur, bu durumda verileriniz belirttiğiniz uzak Git deposuna gönderilir. Üçüncü taraf Git sağlayıcılarının verilerinizi nasıl işlediğini kontrol edemeyiz.</p>
+    <p>Temel işlevselliği sağlamak için aşağıdaki hizmet sağlayıcılarını kullanıyoruz. Her biri, açıklanan sınırlı veriler için ayrı bir veri sorumlusu/işleyici olarak faaliyet gösterir:</p>
+    <ul>
+        <li><strong>Google Firebase Crashlytics (Google LLC):</strong> Uygulama kusurlarını tanılamamıza ve düzeltmemize yardımcı olmak için anonim çökme raporlarını işler. Bkz. <a href="https://firebase.google.com/support/privacy">Google'ın Gizlilik Politikası</a>.</li>
+        <li><strong>Git uzaktan depo sağlayıcıları (senkronizasyonu etkinleştirdiğinizde):</strong> Notlarınız ve dosyalarınız belirttiğiniz uzak Git deposuna gönderilir. Üçüncü taraf Git sağlayıcılarının verilerinizi nasıl işlediğini kontrol edemeyiz.</li>
+    </ul>
 
     <h2>6. İzinler</h2>
     <p>BambooNode'un çalışması için aşağıdaki izinlere ihtiyaç vardır:</p>
     <ul>
-        <li><strong>INTERNET:</strong> Git senkronizasyonu ve geri bildirim özellikleri için gereklidir</li>
+        <li><strong>INTERNET:</strong> Git senkronizasyonu, geri bildirim özellikleri ve Firebase Crashlytics aracılığıyla anonim çökme raporlarını iletmek için gereklidir</li>
         <li><strong>READ_EXTERNAL_STORAGE:</strong> Cihazınızdan notları ve dosyaları okumak için gereklidir</li>
         <li><strong>WRITE_EXTERNAL_STORAGE:</strong> Cihazınıza notları ve dosyaları kaydetmek için gereklidir</li>
         <li><strong>MANAGE_EXTERNAL_STORAGE:</strong> Android 11+ üzerinde harici depolamaya tam erişim için gereklidir</li>

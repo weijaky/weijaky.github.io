@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
@@ -64,8 +64,8 @@
     <h1>BambooNode 隱私政策</h1>
 
     <div class="highlight">
-        <p><strong>更新日期：</strong> 2026年7月26日</p>
-        <p><strong>生效日期：</strong> 2026年7月26日</p>
+        <p><strong>更新日期：</strong> 2026年8月29日</p>
+        <p><strong>生效日期：</strong> 2026年8月29日</p>
     </div>
 
     <h2>1. 簡介</h2>
@@ -103,6 +103,17 @@
     </ul>
     <p>這些資訊僅在您明確提交意見回饋時傳送，且僅用於改進應用。</p>
 
+    <h3>2.4 當機報告資料（Firebase Crashlytics）</h3>
+    <p>為協助我們識別並修復應用程式當機問題並提升穩定性，BambooNode 使用 Firebase Crashlytics，這是一項由 Google LLC 提供的服務。當應用程式當機或遇到非致命錯誤時，Crashlytics 會自動收集並傳輸以下技術資料：</p>
+    <ul>
+        <li>當機堆疊追蹤和例外詳情</li>
+        <li>裝置型號和 Android 作業系統版本</li>
+        <li>應用程式版本和建置識別碼</li>
+        <li>匿名、隨機產生的安裝識別碼（應用程式重新安裝時重設）</li>
+        <li>當機前立即發生的應用程式內事件麵包屑記錄（如果啟用 Google Analytics）</li>
+    </ul>
+    <p>這些資料<strong>為匿名資料，無法識別您的個人身份</strong>。資料透過加密連線傳輸至 Google 的伺服器，僅用於診斷和解決應用程式缺陷。Crashlytics 不會收集您筆記或檔案的內容。Google 對資料的使用受<a href="https://firebase.google.com/support/privacy">Google 隱私政策</a>規範。您可以透過停用應用程式的網際網路存取來阻止收集當機報告，但這也會停用 Git 同步功能。</p>
+
     <h2>3. 我們如何使用您的資訊？</h2>
     <p>我們僅將您的資訊用於以下目的：</p>
     <ul>
@@ -128,12 +139,16 @@
 
     <h2>5. 資料分享</h2>
     <p>我們不會出於任何目的向第三方分享、出售或出租您的個人資訊。</p>
-    <p>唯一的例外是當您啟用Git同步時，您的資料會傳輸到您指定的遠端Git儲存庫。我們無法控制第三方Git提供者如何處理您的資料。</p>
+    <p>我們使用以下服務提供者來提供核心功能。每個服務提供者皆作為獨立的資料控制者/處理者，處理以下所述的有限資料：</p>
+    <ul>
+        <li><strong>Google Firebase Crashlytics (Google LLC)：</strong>處理匿名當機報告以協助我們診斷並修復應用程式缺陷。請參閱<a href="https://firebase.google.com/support/privacy">Google 隱私政策</a>。</li>
+        <li><strong>Git 遠端儲存庫提供者（當您啟用同步時）：</strong>您的筆記和檔案會傳輸到您指定的遠端 Git 儲存庫。我們無法控制第三方 Git 提供者如何處理您的資料。</li>
+    </ul>
 
     <h2>6. 權限說明</h2>
     <p>BambooNode需要以下權限才能正常執行：</p>
     <ul>
-        <li><strong>INTERNET：</strong> 用於Git同步和意見回饋功能</li>
+        <li><strong>INTERNET：</strong> 用於Git同步、意見回饋功能，以及透過 Firebase Crashlytics 傳輸匿名當機報告</li>
         <li><strong>READ_EXTERNAL_STORAGE：</strong> 用於讀取裝置上的筆記和檔案</li>
         <li><strong>WRITE_EXTERNAL_STORAGE：</strong> 用於儲存筆記和檔案到裝置</li>
         <li><strong>MANAGE_EXTERNAL_STORAGE：</strong> 用於在Android 11+上完整存取外部儲存</li>

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
@@ -64,8 +64,8 @@
     <h1>BambooNode プライバシーポリシー</h1>
 
     <div class="highlight">
-        <p><strong>最終更新日：</strong> 2026年7月26日</p>
-        <p><strong>効力発生日：</strong> 2026年7月26日</p>
+        <p><strong>最終更新日：</strong> 2026年8月29日</p>
+        <p><strong>効力発生日：</strong> 2026年8月29日</p>
     </div>
 
     <h2>1. はじめに</h2>
@@ -103,6 +103,17 @@
     </ul>
     <p>これらの情報は、お客様が明示的にフィードバックを送信した場合にのみ送信され、アプリケーションの改善のみに使用されます。</p>
 
+    <h3>2.4 クラッシュレポートデータ（Firebase Crashlytics）</h3>
+    <p>アプリケーションのクラッシュを特定・修正し安定性を向上させるため、BambooNodeはGoogle LLCが提供するサービスであるFirebase Crashlyticsを使用します。アプリケーションがクラッシュした場合や致命的でないエラーが発生した場合、Crashlyticsは以下の技術データを自動的に収集・送信します：</p>
+    <ul>
+        <li>クラッシュのスタックトレースおよび例外の詳細</li>
+        <li>デバイスモデルおよびAndroidオペレーティングシステムのバージョン</li>
+        <li>アプリケーションバージョンおよびビルド識別子</li>
+        <li>匿名でランダムに生成されたインストール識別子（アプリの再インストール時にリセット）</li>
+        <li>クラッシュの直前に発生したアプリ内イベントのブレッドクラムログ（Google Analyticsが有効な場合）</li>
+    </ul>
+    <p>これらのデータは<strong>匿名であり、お客様を個人として特定するものではありません</strong>。暗号化された接続を介してGoogleのサーバーに送信され、アプリケーションの欠陥の診断と解決にのみ使用されます。Crashlyticsはノートやファイルの内容を収集しません。Googleによるデータの使用は、<a href="https://firebase.google.com/support/privacy">Googleのプライバシーポリシー</a>に準拠します。アプリのインターネットアクセスを無効にすることでクラッシュレポートの収集を防ぐことができますが、これによりGit同期機能も無効になります。</p>
+
     <h2>3. 情報の使用方法</h2>
     <p>お客様の情報は以下の目的でのみ使用されます：</p>
     <ul>
@@ -128,12 +139,16 @@
 
     <h2>5. データの共有</h2>
     <p>私たちは、いかなる目的でも第三者にお客様の個人情報を共有、販売、または貸与することはありません。</p>
-    <p>唯一の例外は、Git同期を有効にした場合で、その場合はお客様のデータが指定したリモートGitリポジトリに送信されます。第三者のGitプロバイダーがお客様のデータをどのように処理するかについては、私たちは制御できません。</p>
+    <p>コア機能を提供するために以下のサービスプロバイダーを使用します。それぞれは、記載された限定されたデータについて個別のデータ管理者/処理者として機能します：</p>
+    <ul>
+        <li><strong>Google Firebase Crashlytics（Google LLC）：</strong>アプリケーションの欠陥の診断と修正を支援するため、匿名のクラッシュレポートを処理します。<a href="https://firebase.google.com/support/privacy">Googleのプライバシーポリシー</a>を参照してください。</li>
+        <li><strong>Gitリモートリポジトリプロバイダー（同期を有効にした場合）：</strong>お客様のノートおよびファイルは、指定したリモートGitリポジトリに送信されます。第三者Gitプロバイダーがお客様のデータをどのように処理するかについては、私たちは制御できません。</li>
+    </ul>
 
     <h2>6. アクセス許可</h2>
     <p>BambooNodeは機能するために以下のアクセス許可が必要です：</p>
     <ul>
-        <li><strong>INTERNET：</strong> Git同期およびフィードバック機能に必要</li>
+        <li><strong>INTERNET：</strong> Git同期、フィードバック機能、およびFirebase Crashlyticsを介した匿名クラッシュレポートの送信に必要</li>
         <li><strong>READ_EXTERNAL_STORAGE：</strong> デバイスからノートおよびファイルを読み取るために必要</li>
         <li><strong>WRITE_EXTERNAL_STORAGE：</strong> デバイスにノートおよびファイルを保存するために必要</li>
         <li><strong>MANAGE_EXTERNAL_STORAGE：</strong> Android 11+で外部ストレージへの完全なアクセスに必要</li>

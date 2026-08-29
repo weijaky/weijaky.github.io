@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-HK">
 <head>
     <meta charset="UTF-8">
@@ -64,8 +64,8 @@
     <h1>BambooNode 私隱政策</h1>
 
     <div class="highlight">
-        <p><strong>更新日期：</strong> 2026年7月26日</p>
-        <p><strong>生效日期：</strong> 2026年7月26日</p>
+        <p><strong>更新日期：</strong> 2026年8月29日</p>
+        <p><strong>生效日期：</strong> 2026年8月29日</p>
     </div>
 
     <h2>1. 簡介</h2>
@@ -103,6 +103,17 @@
     </ul>
     <p>這些資訊僅在您明確提交反饋時發送，且僅用於改進應用。</p>
 
+    <h3>2.4 當機報告數據（Firebase Crashlytics）</h3>
+    <p>為幫助我們識別和修復應用當機並提升穩定性，BambooNode使用Firebase Crashlytics，這是一項由Google LLC提供的服務。當應用當機或遇到非致命錯誤時，Crashlytics會自動收集並傳輸以下技術數據：</p>
+    <ul>
+        <li>當機堆疊追蹤和例外詳情</li>
+        <li>設備型號和Android作業系統版本</li>
+        <li>應用版本和建置識別碼</li>
+        <li>匿名、隨機生成的安裝識別碼（重新安裝應用時重設）</li>
+        <li>當機前即刻發生的應用內事件麵包屑記錄（如果啟用了Google Analytics）</li>
+    </ul>
+    <p>這些數據是<strong>匿名的，不會識別您的個人身份</strong>。它們通過加密連接傳輸到Google的伺服器，且僅用於診斷和解決應用缺陷。Crashlytics不會收集您筆記或文件的內容。Google對數據的使用受<a href="https://firebase.google.com/support/privacy">Google私隱政策</a>規管。您可以通過停用應用的網絡存取來阻止當機報告的收集，但這也會停用Git同步功能。</p>
+
     <h2>3. 我們如何使用您的資訊？</h2>
     <p>我們僅將您的資訊用於以下目的：</p>
     <ul>
@@ -128,12 +139,16 @@
 
     <h2>5. 數據共享</h2>
     <p>我們不會出於任何目的向第三方共享、出售或出租您的個人資訊。</p>
-    <p>唯一的例外是當您啟用Git同步時，您的數據會傳輸到您指定的遠程Git倉庫。我們無法控制第三方Git提供商如何處理您的數據。</p>
+    <p>我們使用以下服務提供商以提供核心功能。各自作為獨立的數據控制者/處理者處理所描述的有限數據：</p>
+    <ul>
+        <li><strong>Google Firebase Crashlytics（Google LLC）：</strong>處理匿名當機報告以幫助我們診斷和修復應用缺陷。請參閱<a href="https://firebase.google.com/support/privacy">Google私隱政策</a>。</li>
+        <li><strong>Git遠程倉庫提供商（當您啟用同步時）：</strong>您的筆記和文件會傳輸到您指定的遠程Git倉庫。我們無法控制第三方Git提供商如何處理您的數據。</li>
+    </ul>
 
     <h2>6. 權限說明</h2>
     <p>BambooNode需要以下權限才能正常運行：</p>
     <ul>
-        <li><strong>INTERNET：</strong> 用於Git同步和反饋功能</li>
+        <li><strong>INTERNET：</strong> 用於Git同步、反饋功能以及通過Firebase Crashlytics傳輸匿名當機報告</li>
         <li><strong>READ_EXTERNAL_STORAGE：</strong> 用於讀取設備上的筆記和文件</li>
         <li><strong>WRITE_EXTERNAL_STORAGE：</strong> 用於保存筆記和文件到設備</li>
         <li><strong>MANAGE_EXTERNAL_STORAGE：</strong> 用於在Android 11+上完全訪問外部存儲</li>

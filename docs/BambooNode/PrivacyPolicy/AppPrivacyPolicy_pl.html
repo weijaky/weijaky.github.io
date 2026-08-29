@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
@@ -64,8 +64,8 @@
     <h1>Polityka prywatności BambooNode</h1>
 
     <div class="highlight">
-        <p><strong>Ostatnia aktualizacja:</strong> 26 lipca 2026</p>
-        <p><strong>Data wejścia w życie:</strong> 26 lipca 2026</p>
+        <p><strong>Ostatnia aktualizacja:</strong> 29 sierpnia 2026</p>
+        <p><strong>Data wejścia w życie:</strong> 29 sierpnia 2026</p>
     </div>
 
     <h2>1. Wprowadzenie</h2>
@@ -103,6 +103,17 @@
     </ul>
     <p>Te informacje są wysyłane tylko wtedy, gdy jawnie przesyłasz feedback i są używane wyłącznie do poprawy aplikacji.</p>
 
+    <h3>2.4 Dane raportów awarii (Firebase Crashlytics)</h3>
+    <p>Aby pomóc nam identyfikować i naprawiać awarie aplikacji oraz poprawiać stabilność, BambooNode korzysta z Firebase Crashlytics, usługi świadczonej przez Google LLC. Gdy aplikacja ulega awarii lub napotyka błąd niekrytyczny, Crashlytics automatycznie zbiera i przesyła następujące dane techniczne:</p>
+    <ul>
+        <li>Ślady stosu awarii i szczegóły wyjątków</li>
+        <li>Model urządzenia i wersja systemu operacyjnego Android</li>
+        <li>Wersja aplikacji i identyfikator kompilacji</li>
+        <li>Anonimowe, losowo generowane identyfikatory instalacji (resetowane po ponownej instalacji aplikacji)</li>
+        <li>Dzienniki okruszkowe zdarzeń w aplikacji bezpośrednio poprzedzających awarię (jeśli włączono Google Analytics)</li>
+    </ul>
+    <p>Te dane są <strong>anonimowe i nie identyfikują Cię osobiście</strong>. Są przesyłane przez zaszyfrowane połączenie do serwerów Google i są używane wyłącznie do diagnozowania i rozwiązywania wad aplikacji. Crashlytics nie zbiera treści Twoich notatek ani plików. Korzystanie z danych przez Google reguluje <a href="https://firebase.google.com/support/privacy">Polityka prywatności Google</a>. Możesz zapobiec zbieraniu raportów awarii, wyłączając dostęp aplikacji do Internetu, choć wyłączy to również funkcję synchronizacji Git.</p>
+
     <h2>3. Jak używamy Twoich informacji?</h2>
     <p>Używamy Twoich informacji tylko do następujących celów:</p>
     <ul>
@@ -128,12 +139,16 @@
 
     <h2>5. Udostępnianie danych</h2>
     <p>Nie udostępniamy, sprzedajemy ani wynajmujemy Twoich danych osobowych trzecim osobom w żadnym celu.</p>
-    <p>Jedyne wyjątkiem jest włączenie synchronizacji Git, w którym przypadku Twoje dane są przesyłane do wybranego przez Ciebie zdalnego repozytorium Git. Nie mamy kontroli nad tym, jak dostawcy Git trzecich stron obsługują Twoje dane.</p>
+    <p>Korzystamy z następujących dostawców usług w celu zapewnienia podstawowej funkcjonalności. Każdy z nich działa jako oddzielny administrator/przetwarzający dane dla ograniczonych danych opisanych poniżej:</p>
+    <ul>
+        <li><strong>Google Firebase Crashlytics (Google LLC):</strong> Przetwarza anonimowe raporty awarii, aby pomóc nam diagnozować i naprawiać wady aplikacji. Zobacz <a href="https://firebase.google.com/support/privacy">Polityka prywatności Google</a>.</li>
+        <li><strong>Dostawcy zdalnych repozytoriów Git (gdy włączysz synchronizację):</strong> Twoje notatki i pliki są przesyłane do wybranego przez Ciebie zdalnego repozytorium Git. Nie mamy kontroli nad tym, jak dostawcy Git trzecich stron obsługują Twoje dane.</li>
+    </ul>
 
     <h2>6. Uprawnienia</h2>
     <p>BambooNode wymaga następujących uprawnień do działania:</p>
     <ul>
-        <li><strong>INTERNET:</strong> Wymagane do synchronizacji Git i funkcji feedbacku</li>
+        <li><strong>INTERNET:</strong> Wymagane do synchronizacji Git, funkcji feedbacku i przesyłania anonimowych raportów awarii przez Firebase Crashlytics</li>
         <li><strong>READ_EXTERNAL_STORAGE:</strong> Wymagane do odczytu notatek i plików z Twojego urządzenia</li>
         <li><strong>WRITE_EXTERNAL_STORAGE:</strong> Wymagane do zapisywania notatek i plików na Twoim urządzeniu</li>
         <li><strong>MANAGE_EXTERNAL_STORAGE:</strong> Wymagane do pełnego dostępu do pamięci zewnętrznej w Androidzie 11+</li>
