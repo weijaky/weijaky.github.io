@@ -64,8 +64,8 @@
     <h1>BambooNode 隐私政策</h1>
 
     <div class="highlight">
-        <p><strong>更新日期：</strong> 2026年7月26日</p>
-        <p><strong>生效日期：</strong> 2026年7月26日</p>
+        <p><strong>更新日期：</strong> 2026年8月29日</p>
+        <p><strong>生效日期：</strong> 2026年8月29日</p>
     </div>
 
     <h2>1. 简介</h2>
@@ -103,6 +103,17 @@
     </ul>
     <p>这些信息仅在您明确提交反馈时发送，且仅用于改进应用。</p>
 
+    <h3>2.4 崩溃报告数据（Firebase Crashlytics）</h3>
+    <p>为帮助我们定位并修复应用崩溃、提升稳定性，BambooNode 使用 Google LLC 提供的 Firebase Crashlytics 服务。当应用发生崩溃或遇到非致命错误时，Crashlytics 会自动收集并传输以下技术数据：</p>
+    <ul>
+        <li>崩溃堆栈与异常详情</li>
+        <li>设备型号与 Android 系统版本</li>
+        <li>应用版本与构建标识</li>
+        <li>随机生成的匿名安装标识（重新安装应用后会重置）</li>
+        <li>崩溃发生前应用内事件的面包屑日志（如已启用 Google Analytics）</li>
+    </ul>
+    <p>该数据<strong>为匿名信息，不会识别您的个人身份</strong>，通过加密连接传输至 Google 服务器，仅用于诊断和修复应用缺陷。Crashlytics 不会收集您笔记或文件的内容。Google 对该数据的使用受 <a href="https://firebase.google.com/support/privacy">Google 隐私政策</a> 约束。您可通过关闭本应用的网络访问来阻止崩溃报告上报，但此举也会同时禁用 Git 同步功能。</p>
+
     <h2>3. 我们如何使用您的信息？</h2>
     <p>我们仅将您的信息用于以下目的：</p>
     <ul>
@@ -128,12 +139,16 @@
 
     <h2>5. 数据共享</h2>
     <p>我们不会出于任何目的向第三方共享、出售或出租您的个人信息。</p>
-    <p>唯一的例外是当您启用Git同步时，您的数据会传输到您指定的远程Git仓库。我们无法控制第三方Git提供商如何处理您的数据。</p>
+    <p>我们使用以下服务提供商提供核心功能，各服务商仅就所述的有限数据进行处理：</p>
+    <ul>
+        <li><strong>Google Firebase Crashlytics（Google LLC）：</strong> 处理匿名崩溃报告，以帮助我们诊断和修复应用缺陷。详见 <a href="https://firebase.google.com/support/privacy">Google 隐私政策</a>。</li>
+        <li><strong>Git 远程仓库提供商（当您启用同步时）：</strong> 您的笔记和文件会传输到您指定的远程 Git 仓库。我们无法控制第三方 Git 提供商如何处理您的数据。</li>
+    </ul>
 
     <h2>6. 权限说明</h2>
     <p>BambooNode需要以下权限才能正常运行：</p>
     <ul>
-        <li><strong>INTERNET：</strong> 用于Git同步和反馈功能</li>
+        <li><strong>INTERNET：</strong> 用于Git同步、反馈功能，以及通过 Firebase Crashlytics 上传匿名崩溃报告</li>
         <li><strong>READ_EXTERNAL_STORAGE：</strong> 用于读取设备上的笔记和文件</li>
         <li><strong>WRITE_EXTERNAL_STORAGE：</strong> 用于保存笔记和文件到设备</li>
         <li><strong>MANAGE_EXTERNAL_STORAGE：</strong> 用于在Android 11+上完全访问外部存储</li>

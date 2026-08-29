@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -64,8 +64,8 @@
     <h1>Privacy Policy for BambooNode</h1>
 
     <div class="highlight">
-        <p><strong>Last Updated:</strong> July 26, 2026</p>
-        <p><strong>Effective Date:</strong> July 26, 2026</p>
+        <p><strong>Last Updated:</strong> August 29, 2026</p>
+        <p><strong>Effective Date:</strong> August 29, 2026</p>
     </div>
 
     <h2>1. Introduction</h2>
@@ -103,6 +103,17 @@
     </ul>
     <p>This information is only sent when you explicitly submit feedback and is used solely for improving the application.</p>
 
+    <h3>2.4 Crash Report Data (Firebase Crashlytics)</h3>
+    <p>To help us identify and fix application crashes and improve stability, BambooNode uses Firebase Crashlytics, a service provided by Google LLC. When the application crashes or encounters a non-fatal error, Crashlytics automatically collects and transmits the following technical data:</p>
+    <ul>
+        <li>Crash stack traces and exception details</li>
+        <li>Device model and Android operating system version</li>
+        <li>Application version and build identifier</li>
+        <li>Anonymous, randomly generated installation identifiers (reset on app reinstall)</li>
+        <li>Breadcrumb logs of in-app events immediately preceding the crash (if Google Analytics is enabled)</li>
+    </ul>
+    <p>This data is <strong>anonymous and does not identify you personally</strong>. It is transmitted over an encrypted connection to Google's servers and is used solely to diagnose and resolve application defects. Crashlytics does not collect the content of your notes or files. Google's use of the data is governed by <a href="https://firebase.google.com/support/privacy">Google's Privacy Policy</a>. You can prevent crash report collection by disabling the app's internet access, though this will also disable the Git synchronization feature.</p>
+
     <h2>3. How Do We Use Your Information?</h2>
     <p>We use your information only for the following purposes:</p>
     <ul>
@@ -128,12 +139,16 @@
 
     <h2>5. Data Sharing</h2>
     <p>We do not share, sell, or rent your personal information to third parties for any purpose.</p>
-    <p>The only exception is when you enable Git synchronization, in which case your data is transmitted to the remote Git repository you specify. We have no control over how third-party Git providers handle your data.</p>
+    <p>We use the following service providers to deliver core functionality. Each operates as a separate data controller/processor for the limited data described:</p>
+    <ul>
+        <li><strong>Google Firebase Crashlytics (Google LLC):</strong> Processes anonymous crash reports to help us diagnose and fix application defects. See <a href="https://firebase.google.com/support/privacy">Google's Privacy Policy</a>.</li>
+        <li><strong>Git remote repository providers (when you enable synchronization):</strong> Your notes and files are transmitted to the remote Git repository you specify. We have no control over how third-party Git providers handle your data.</li>
+    </ul>
 
     <h2>6. Permissions</h2>
     <p>BambooNode requires the following permissions to function:</p>
     <ul>
-        <li><strong>INTERNET:</strong> Required for Git synchronization and feedback features</li>
+        <li><strong>INTERNET:</strong> Required for Git synchronization, feedback features, and transmitting anonymous crash reports via Firebase Crashlytics</li>
         <li><strong>READ_EXTERNAL_STORAGE:</strong> Required to read notes and files from your device</li>
         <li><strong>WRITE_EXTERNAL_STORAGE:</strong> Required to save notes and files to your device</li>
         <li><strong>MANAGE_EXTERNAL_STORAGE:</strong> Required for full access to external storage on Android 11+</li>
