@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jason Wei · Indie Android Developer</title>
+  <meta name="description" content="Jason Wei is an indie Android developer building privacy-first apps like BambooNode. Kotlin, Jetpack Compose, offline-first design.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25'%3E%3Cpath fill='%2390bd0f' d='m 1.144387,13.142468 c -0.02275,-0.355446 0.408763,-0.355446 0.408763,0 0,0.355446 1.9051906,6.335824 9.136739,5.873746 C 17.917883,18.554133 18.125818,11.590948 17.0346,9.5382459 15.950489,7.480214 13.252655,4.7130671 8.9695311,5.7385285 4.6899611,6.769322 4.1816732,12.703492 7.8498761,13.759166 11.518078,14.807734 12.733704,12.248523 12.523992,10.652571 12.310725,9.0708346 10.462403,8.670958 9.8474822,8.670958 9.2254518,8.670958 8.8877779,9.1152654 8.5678767,8.9019982 8.2479751,8.670958 9.1010461,8.2977397 9.3854019,8.1555613 9.6697591,8.022269 13.940442,7.6934816 13.940442,11.624714 c 0,3.934786 -5.1219754,5.58228 -8.3796383,3.280768 C 3.3872512,13.377065 2.4630917,11.482535 2.7901021,9.2361174 1.9725763,8.6851765 1.5104966,7.9565116 1.4038627,7.0376838 c 0,0 1.2618333,-1.0307935 2.5094487,-0.8175257 0,0 1.119655,-1.6350517 2.1806612,-2.0900227 0,0 0,-1.7594575 1.4395564,-3.0088502 0,0 1.8500951,0.302129 2.811578,1.5461899 0,0 2.882666,0 3.595335,0.5331691 0,0 1.635053,-1.1729719 3.980995,-1.1729719 0,0 0.853071,1.7985568 0.151072,3.5029205 0,0 1.457329,1.4040117 1.457329,1.9425124 0,0 2.061586,-0.1688369 4.347103,2.2286462 0,0 -0.799753,2.2019876 -3.120815,3.2754366 0,0 0,1.297377 -0.62203,2.48101 0,0 1.635051,2.027822 1.261833,4.308007 0,0 -1.855428,1.1552 -4.867834,0.213268 0,0 -1.048566,0.746436 -2.815131,1.172972 0,0 -0.302129,1.759457 -2.219761,2.726269 0,0 -1.9478444,-1.101882 -2.1237888,-2.427695 0,0 -1.8518742,-0.302129 -2.560989,-0.728665 0,0 -0.4443075,0.728665 -2.550325,0.728665 0,0 -0.6575751,-1.22629 -0.355446,-2.41881 0,0 -2.5112261,-1.826992 -2.7795876,-5.877298 v 0.0012 z'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="/">
+        <span class="logo">
+          <svg viewBox="0 0 25 25" aria-label="Jason Wei logo"><path d="m 1.144387,13.142468 c -0.02275,-0.355446 0.408763,-0.355446 0.408763,0 0,0.355446 1.9051906,6.335824 9.136739,5.873746 C 17.917883,18.554133 18.125818,11.590948 17.0346,9.5382459 15.950489,7.480214 13.252655,4.7130671 8.9695311,5.7385285 4.6899611,6.769322 4.1816732,12.703492 7.8498761,13.759166 11.518078,14.807734 12.733704,12.248523 12.523992,10.652571 12.310725,9.0708346 10.462403,8.670958 9.8474822,8.670958 9.2254518,8.670958 8.8877779,9.1152654 8.5678767,8.9019982 8.2479751,8.670958 9.1010461,8.2977397 9.3854019,8.1555613 9.6697591,8.022269 13.940442,7.6934816 13.940442,11.624714 c 0,3.934786 -5.1219754,5.58228 -8.3796383,3.280768 C 3.3872512,13.377065 2.4630917,11.482535 2.7901021,9.2361174 1.9725763,8.6851765 1.5104966,7.9565116 1.4038627,7.0376838 c 0,0 1.2618333,-1.0307935 2.5094487,-0.8175257 0,0 1.119655,-1.6350517 2.1806612,-2.0900227 0,0 0,-1.7594575 1.4395564,-3.0088502 0,0 1.8500951,0.302129 2.811578,1.5461899 0,0 2.882666,0 3.595335,0.5331691 0,0 1.635053,-1.1729719 3.980995,-1.1729719 0,0 0.853071,1.7985568 0.151072,3.5029205 0,0 1.457329,1.4040117 1.457329,1.9425124 0,0 2.061586,-0.1688369 4.347103,2.2286462 0,0 -0.799753,2.2019876 -3.120815,3.2754366 0,0 0,1.297377 -0.62203,2.48101 0,0 1.635051,2.027822 1.261833,4.308007 0,0 -1.855428,1.1552 -4.867834,0.213268 0,0 -1.048566,0.746436 -2.815131,1.172972 0,0 -0.302129,1.759457 -2.219761,2.726269 0,0 -1.9478444,-1.101882 -2.1237888,-2.427695 0,0 -1.8518742,-0.302129 -2.560989,-0.728665 0,0 -0.4443075,0.728665 -2.550325,0.728665 0,0 -0.6575751,-1.22629 -0.355446,-2.41881 0,0 -2.5112261,-1.826992 -2.7795876,-5.877298 v 0.0012 z" style="fill:#90bd0f"/></svg>
+        </span>
+        <span>Jason Wei</span>
+      </a>
+      <div class="nav-links">
+        <a href="#apps">Apps</a>
+        <a href="#about">About</a>
+        <a href="blog/">Blog</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <button class="icon-btn" data-theme-toggle aria-label="Switch theme"></button>
+        <a class="icon-btn" href="https://github.com/weijaky" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2.17c-3.2.7-3.87-1.36-3.87-1.36-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.66.41.36.78 1.05.78 2.13v3.16c0 .31.21.68.8.56A10.52 10.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <span class="eyebrow">Hi, I'm Jason Wei</span>
+      <h1>I know Android inside out — my apps prove it.</h1>
+      <p class="lede">
+        12+ years across the Android stack, from e-readers to phones and watches.
+        Now poured into <a href="apps/bamboonode.html"><strong>BambooNode</strong></a>, a
+        notes and file manager that works fully offline. No accounts, no tracking,
+        no nonsense.
+      </p>
+      <p class="motto">「 Focus on <b>yourself</b>, not others. 」</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="apps/bamboonode.html">Explore BambooNode</a>
+        <a class="btn btn-outline" href="https://github.com/weijaky" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2.17c-3.2.7-3.87-1.36-3.87-1.36-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.66.41.36.78 1.05.78 2.13v3.16c0 .31.21.68.8.56A10.52 10.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+          GitHub
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <section class="section" id="apps">
+    <div class="container">
+      <div class="section-head">
+        <h2>Apps</h2>
+      </div>
+      <div class="app-grid">
+        <article class="card app-card">
+          <div class="app-icon">
+            <img src="img/apps/bamboonode.png" alt="BambooNode app icon">
+          </div>
+          <h3>BambooNode <span class="lang-sub">竹节笔记</span></h3>
+          <p class="tagline">Privacy-first Markdown notes &amp; file manager for Android</p>
+          <p class="desc">
+            Markdown notes with Mermaid diagrams, PDF export, and Git sync — organized in a
+            tree structure with tags and search. Fully offline, no account required.
+          </p>
+          <div class="chips">
+            <span class="chip">Markdown</span>
+            <span class="chip">Mermaid</span>
+            <span class="chip">PDF export</span>
+            <span class="chip">Git sync</span>
+            <span class="chip">Offline-first</span>
+          </div>
+          <div class="card-actions">
+            <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=app.bamboonode" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 2.7v18.6c0 .6.7 1 1.2.7l16-9.3c.5-.3.5-1.1 0-1.4l-16-9.3C3.7 1.7 3 2.1 3 2.7z"/></svg>
+              Google Play
+            </a>
+            <a class="btn btn-tonal" href="apps/bamboonode.html">Support &amp; FAQ</a>
+          </div>
+        </article>
+
+        <article class="card app-card">
+          <div class="app-icon">
+            <img src="img/apps/literacy.jpg" alt="Literacy app icon">
+          </div>
+          <h3>Literacy <span class="lang-sub">识字测评</span></h3>
+          <p class="tagline">Chinese literacy learning app for kids</p>
+          <p class="desc">
+            Stroke-order animation, listening &amp; speaking practice, and level reports —
+            helping children learn to read and write Chinese characters. Now available on
+            Tencent MyApp and Huawei AppGallery.
+          </p>
+          <div class="chips">
+            <span class="chip">Education</span>
+            <span class="chip">Stroke order</span>
+            <span class="chip">Speech</span>
+            <span class="chip">腾讯应用宝</span>
+            <span class="chip">华为应用市场</span>
+          </div>
+        </article>
+
+        <article class="card app-card">
+          <div class="app-icon">
+            <img src="img/apps/pvsz.png" alt="PvsZ app icon">
+          </div>
+          <h3>PvsZ <span class="lang-sub">植物大战僵尸</span></h3>
+          <p class="tagline">Tower-defense game built with Cocos2d</p>
+          <p class="desc">
+            A fan-made, Plants-vs-Zombies-style tower defense — a hands-on game-dev learning
+            project covering sprite animation, scene flow, and combat systems.
+          </p>
+          <div class="chips">
+            <span class="chip">Cocos2d</span>
+            <span class="chip">Java</span>
+            <span class="chip">Game dev</span>
+            <span class="chip">Learning project</span>
+          </div>
+        </article>
+
+        <article class="card app-card">
+          <div class="app-icon">
+            <img src="img/apps/ardtool.svg" alt="ArdTool app icon">
+          </div>
+          <h3>ArdTool</h3>
+          <p class="tagline">Android platform toolbox</p>
+          <p class="desc">
+            Device properties, launcher &amp; setup-wizard customization, and on-device
+            speech-to-text (Vosk) — utilities built for real device deployment scenarios.
+          </p>
+          <div class="chips">
+            <span class="chip">Setup Wizard</span>
+            <span class="chip">Launcher</span>
+            <span class="chip">Vosk STT</span>
+            <span class="chip">Internal tools</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-head">
+        <h2>About</h2>
+      </div>
+      <div class="about-grid">
+        <div class="card about-bio">
+          <p>
+            I've spent 12+ years across the Android stack — Framework, SystemUI,
+            Bluetooth, OTA — fixing what most users never see. That depth now runs
+            under my own apps: fewer bugs, smoother UI, and the discipline to keep
+            them tiny and private.
+          </p>
+          <p>
+            I write Kotlin, think in Compose and MVI, and sweat the details — smooth
+            60fps interactions, instant cold starts, and zero network calls you didn't
+            ask for. Everything I build follows one rule:
+            <strong>your data belongs to you</strong>.
+          </p>
+          <p>
+            When I'm not coding, I'm usually sketching app icons, writing dev notes
+            for this site, or asking myself the same question before every release:
+            would I install this myself?
+          </p>
+          <div class="skills">
+            <span class="chip">Kotlin</span>
+            <span class="chip">Java</span>
+            <span class="chip">C/C++</span>
+            <span class="chip">Android Framework</span>
+            <span class="chip">SystemUI</span>
+            <span class="chip">Jetpack Compose</span>
+            <span class="chip">MVI</span>
+            <span class="chip">Room</span>
+            <span class="chip">Cocos2d</span>
+            <span class="chip">CI/CD</span>
+          </div>
+        </div>
+        <div class="card facts">
+          <div class="fact"><span class="k">Focus</span><span class="v">Android apps</span></div>
+          <div class="fact"><span class="k">Experience</span><span class="v">12+ years</span></div>
+          <div class="fact"><span class="k">Apps shipped</span><span class="v">4 (2 platforms+)</span></div>
+          <div class="fact"><span class="k">Stack</span><span class="v">Kotlin · Java · C/C++</span></div>
+          <div class="fact"><span class="k">Belief</span><span class="v">Privacy by default</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="blog">
+    <div class="container">
+      <div class="section-head">
+        <h2>Latest writing</h2>
+        <a class="more" href="blog/">All posts →</a>
+      </div>
+      <div class="post-list">
+        <a class="post-item" href="blog/bamboonode-launch.html">
+          <div class="meta">Oct 3, 2026</div>
+          <h3>BambooNode 1.0 — Notes that stay on your device</h3>
+          <p>Why I built a privacy-first notes app, and what's inside the first release.</p>
+        </a>
+        <a class="post-item" href="blog/hello-world.html">
+          <div class="meta">Oct 11, 2026</div>
+          <h3>Hello, world — and why this site exists</h3>
+          <p>A new home for my apps, dev notes, and everything in between.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="contact-card">
+        <div>
+          <h2>Get in touch</h2>
+          <p>Feedback, bug reports, or just saying hi — my inbox is open.</p>
+        </div>
+        <div class="hero-actions" style="margin-top:0">
+          <a class="btn" href="mailto:weijaky@gmail.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            Email
+          </a>
+          <a class="btn" href="https://github.com/weijaky" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span id="year">2026</span> Jason Wei</span>
+      <span class="motto">Focus on yourself, not others.</span>
+      <div class="footer-links">
+        <a href="https://github.com/weijaky" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:weijaky@gmail.com">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
